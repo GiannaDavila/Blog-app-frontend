@@ -1,5 +1,16 @@
 import { useState } from "react"
 
+
+export const handleDelete = () => {
+        fetch(`http://localhost:3030/`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }
+
+
 export default function AddPost() {
     const [form, setForm] = useState({})
 
@@ -13,9 +24,6 @@ export default function AddPost() {
             body: JSON.stringify(form)
         })
     }
-
-
-
 
     const handleForm = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })
@@ -40,4 +48,5 @@ export default function AddPost() {
             </form>
         </div>
     )
-}
+    }
+
