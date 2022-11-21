@@ -1,8 +1,8 @@
 import { useState } from "react"
+// import { ObjectId } from "mongodb"
 
-
-export const handleDelete = () => {
-        fetch(`http://localhost:3030/`, {
+export const handleDelete = (blogId) => {
+        fetch(`http://localhost:3030/${blogId} `, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

@@ -13,7 +13,8 @@ export default function SinglePost() {
                 <img src="https://source.unsplash.com/random?sig=1" alt="" />
                 <h1>{location.state.author}</h1>
                 <p>{location.state.text}</p>
-                <button onClick={handleDelete}>Delete</button>
+                <p>{location.state._id}</p>
+                <button onClick={() => handleDelete(location.state._id)}>Delete</button>
             </div>
         </div>
     )
