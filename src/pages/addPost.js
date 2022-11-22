@@ -1,5 +1,4 @@
 import { useState } from "react"
-// import { ObjectId } from "mongodb"
 
 export const handleDelete = (blogId) => {
         fetch(`http://localhost:3030/${blogId} `, {
